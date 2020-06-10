@@ -5,4 +5,3 @@ open Sanchez.AOC.Core
 module Solutions =
     let load () =
         Loader.load()
-        ()

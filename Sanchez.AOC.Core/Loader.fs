@@ -4,16 +4,28 @@ open System
 open System.Reflection
 
 module Loader =
+    let loadMethodCallback (m: MethodInfo) () =
+        m.Invoke(null, null)
+        :?> string
+    
+    let loadTypeCallers (t: Type) =
+        t.GetMethods()
+        |> Seq.filter (fun x -> x.IsStatic)
+        |> Seq.map (fun x ->
+            x.GetCustomAttributes(typeof<SolutionAttribute>, false)
+            |> Array.map (fun a -> (x |> loadMethodCallback, a :?> SolutionAttribute)))
+        |> Seq.collect id
+        |> Seq.toArray
+    
     let load() =
-        let test =
-            AppDomain.CurrentDomain.GetAssemblies()
-            |> Seq.map (fun x -> x.GetTypes())
-            |> Seq.collect id
-            |> Seq.map (fun t ->
-                t.GetMethods(BindingFlags.Static)
-                |> Seq.map (fun x -> x.GetCustomAttributes(typeof<SolutionAttribute>, true)))
-            |> Seq.collect id
-            |> Seq.toList
-        
-        printfn "Hello World"
-        ()
+        AppDomain.CurrentDomain.GetAssemblies()
+        |> Seq.filter (fun x -> x.GetName().Name.StartsWith("System") |> not)
+        |> Seq.map (fun x ->
+            x.GetTypes()
+            |> Seq.map (loadTypeCallers)
+            |> Seq.collect id)
+        |> Seq.collect id
+        |> Seq.groupBy (fun (fn, s) -> s.Year |> SolutionYear)
+        |> Map.ofSeq
+        |> Map.map (fun _ -> Seq.groupBy (fun (fn, s) -> s.Day |> SolutionDay) >> Map.ofSeq)
+        |> Map.map (fun _ -> Map.map (fun _ -> Seq.map (fun (fn, x) -> (x.Part |> SolutionPart, fn)) >> Map.ofSeq))

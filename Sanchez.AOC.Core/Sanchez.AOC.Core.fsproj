@@ -6,6 +6,7 @@
 
     <ItemGroup>
         <Compile Include="SolutionAttribute.fs" />
+        <Compile Include="Types.fs" />
         <Compile Include="Loader.fs" />
     </ItemGroup>
 
