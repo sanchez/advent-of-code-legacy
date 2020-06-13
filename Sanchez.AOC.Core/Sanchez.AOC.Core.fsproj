@@ -8,6 +8,7 @@
         <Compile Include="SolutionAttribute.fs" />
         <Compile Include="Types.fs" />
         <Compile Include="Loader.fs" />
+        <Compile Include="InputLoader.fs" />
     </ItemGroup>
 
 </Project>
