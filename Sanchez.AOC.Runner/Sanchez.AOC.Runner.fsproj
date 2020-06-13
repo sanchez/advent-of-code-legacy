@@ -18,4 +18,8 @@
       <PackageReference Include="Microsoft.FSharpLu.Json" Version="0.11.6" />
     </ItemGroup>
 
+    <ItemGroup>
+      <EmbeddedResource Remove="inputs\**" />
+    </ItemGroup>
+
 </Project>
