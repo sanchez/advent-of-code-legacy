@@ -91,6 +91,7 @@ let rec interactiveMode a =
 let main argv =
     let solutions =
         [
+            _2018.Solutions.load()
             _2019.Solutions.load()
         ]
         |> List.fold Loader.mergeSolution Map.empty

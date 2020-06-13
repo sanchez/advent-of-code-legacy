@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <RootNamespace>Sanchez.AOC.Solutions._2018</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Solutions.fs" />
+        <Compile Include="Day1.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Sanchez.AOC.Core\Sanchez.AOC.Core.fsproj" />
+    </ItemGroup>
+
+</Project>

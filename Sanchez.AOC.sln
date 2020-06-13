@@ -6,6 +6,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sanchez.AOC.Solutions.2019"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sanchez.AOC.Core", "Sanchez.AOC.Core\Sanchez.AOC.Core.fsproj", "{14C58455-C1C4-4EB1-BE94-E6DF8873CF8F}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sanchez.AOC.Solutions.2018", "Sanchez.AOC.Solutions.2018\Sanchez.AOC.Solutions.2018.fsproj", "{66B5F770-D014-47D8-96AF-C2FEDDD8A664}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{14C58455-C1C4-4EB1-BE94-E6DF8873CF8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14C58455-C1C4-4EB1-BE94-E6DF8873CF8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14C58455-C1C4-4EB1-BE94-E6DF8873CF8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66B5F770-D014-47D8-96AF-C2FEDDD8A664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B5F770-D014-47D8-96AF-C2FEDDD8A664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B5F770-D014-47D8-96AF-C2FEDDD8A664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B5F770-D014-47D8-96AF-C2FEDDD8A664}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
