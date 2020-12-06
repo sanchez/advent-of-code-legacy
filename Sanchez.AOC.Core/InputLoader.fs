@@ -2,7 +2,6 @@ module Sanchez.AOC.Core.InputLoader
 
 open System.Diagnostics
 open System.IO
-open System.IO
 
 let private inputFolderLocation = "inputs/"
 
@@ -18,7 +17,7 @@ let load () =
         solutionInfo.Constructor.Invoke(solutionInfo.ConstructorArguments |> Seq.map (fun x -> x.Value) |> Seq.toArray)
         :?> SolutionAttribute
     
-    let finalPath = sprintf "inputs/%s/%s-%s-input.txt" loadedInfo.Year loadedInfo.Day loadedInfo.Part
+    let finalPath = sprintf "inputs/%s/%s-input.txt" loadedInfo.Year loadedInfo.Day
     let dir = finalPath |> Path.GetDirectoryName
     if dir |> Directory.Exists |> not then
         dir |> Directory.CreateDirectory |> ignore

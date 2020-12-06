@@ -9,6 +9,7 @@
         <Compile Include="Types.fs" />
         <Compile Include="Loader.fs" />
         <Compile Include="InputLoader.fs" />
+        <Compile Include="Scanner.fs" />
     </ItemGroup>
 
 </Project>

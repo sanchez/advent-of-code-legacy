@@ -10,7 +10,7 @@ type SolutionMap = Map<SolutionYear, SolutionDayMap>
 
 module Loader =
     let loadMethodCallback (m: MethodInfo) () =
-        m.Invoke(null, null)
+        m.Invoke(null, BindingFlags.DoNotWrapExceptions, null, null, null)
         :?> string
     
     let loadTypeCallers (t: Type) =
