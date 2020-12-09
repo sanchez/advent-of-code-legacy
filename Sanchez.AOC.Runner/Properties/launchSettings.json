@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Sanchez.AOC.Runner": {
+      "commandName": "Project",
+      "workingDirectory": "."
+    }
+  }
+}

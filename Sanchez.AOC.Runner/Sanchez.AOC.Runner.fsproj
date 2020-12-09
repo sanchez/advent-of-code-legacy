@@ -12,6 +12,7 @@
     <ItemGroup>
       <ProjectReference Include="..\Sanchez.AOC.Solutions.2018\Sanchez.AOC.Solutions.2018.fsproj" />
       <ProjectReference Include="..\Sanchez.AOC.Solutions.2019\Sanchez.AOC.Solutions.2019.fsproj" />
+      <ProjectReference Include="..\Sanchez.AOC.Solutions.2020\Sanchez.AOC.Solutions.2020.fsproj" />
     </ItemGroup>
 
     <ItemGroup>

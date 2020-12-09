@@ -2,3 +2,4 @@ bin/
 obj/
 /packages/
 cache/
+/.vs/Sanchez.AOC/DesignTimeBuild/.dtbcache.v2

@@ -93,6 +93,7 @@ let main argv =
         [
             _2018.Solutions.load()
             _2019.Solutions.load()
+            _2020.Solutions.load()
         ]
         |> List.fold Loader.mergeSolution Map.empty
         

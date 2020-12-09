@@ -21,6 +21,8 @@ let load () =
     let dir = finalPath |> Path.GetDirectoryName
     if dir |> Directory.Exists |> not then
         dir |> Directory.CreateDirectory |> ignore
+
+    let test = Path.GetFullPath(finalPath)
         
     if finalPath |> File.Exists |> not then
         failwith "Input file does not exist"
