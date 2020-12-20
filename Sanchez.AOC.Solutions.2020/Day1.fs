@@ -13,6 +13,8 @@ let [<Solution("2020", "1", "a")>] partA () =
             | _ -> None)
         |> Seq.toArray
 
+    let test = InputLoader.load()
+
     let (left, right) =
         input
         |> Seq.choose (fun x ->

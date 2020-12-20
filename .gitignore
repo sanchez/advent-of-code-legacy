@@ -3,3 +3,7 @@ obj/
 /packages/
 cache/
 /.vs/Sanchez.AOC/DesignTimeBuild/.dtbcache.v2
+
+.fake
+.ionide
+.vs
