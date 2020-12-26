@@ -72,3 +72,15 @@ module Scanner =
             |> Some
         with
         | _ -> None
+
+    let tryRegex expr s =
+        let re = new Regex(expr)
+        let res = re.Match(s)
+
+        if res.Success then
+            res.Groups
+            |> Seq.skip 1
+            |> Seq.map (fun x -> x.Value)
+            |> Seq.toList
+            |> Some
+        else None
