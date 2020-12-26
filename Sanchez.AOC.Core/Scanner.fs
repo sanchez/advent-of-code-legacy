@@ -84,3 +84,13 @@ module Scanner =
             |> Seq.toList
             |> Some
         else None
+
+    let (|Regex|_|) pattern input =
+        let m = Regex.Match(input, pattern)
+        if m.Success then
+            m.Groups
+            |> Seq.skip 1
+            |> Seq.map (fun x -> x.Value)
+            |> Seq.toList
+            |> Some
+        else None
