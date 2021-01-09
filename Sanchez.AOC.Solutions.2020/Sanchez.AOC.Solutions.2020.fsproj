@@ -20,6 +20,7 @@
     <Compile Include="Day13.fs" />
     <Compile Include="Day14.fs" />
     <Compile Include="Day15.fs" />
+    <Compile Include="Day16.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sanchez.AOC.Core\Sanchez.AOC.Core.fsproj" />
